@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC - Cheetahs Scouting Interface</title>
+    <link rel="stylesheet" href="InterfaceStyle.css">
+</head>
+<body>
+    <h1>FRC - Cheetahs Scouting Interface</h1>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload Excel File</button>
+    <input type="text" id="searchInput" placeholder="Search by Team Number">
+    <select id="sortSelect">
+        <option value="Sort by:">Sort by</option>
+        <option value="autonomous_skills">Autonomous skills</option>
+        <option value="success_throws_speaker_r1">Successfull throws in speaker in ROUND 1</option>
+        <option value="success_throws_speaker_r2">Successfull throws in speaker in ROUND 2</option>
+        <option value="success_throws_speaker_r3">Successfull throws in speaker in ROUND 3</option>
+    </select>
+    <button onclick="sortData()">Sort</button>
+</body>
+<body onload="fetch()">
+    <table id="dataTable">
+        <!-- Table rows will be populated with JavaScript -->
+    </table>
+    <script src="InterfaceScript.js"></script>
+
+</body>
+
+
+</html>
